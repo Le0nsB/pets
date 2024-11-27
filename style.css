@@ -90,29 +90,68 @@ body {
 }
 
 /* Puzzle Styles */
-.puzzle-container {
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px); /* 5 columns for the puzzle */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows for the puzzle */
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+#pilnabilde {
+
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 28%; /* Ensure the image doesn't overflow the page */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.puzzle-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+/* Center buttons horizontally */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block; /* Ensure button behaves as a block element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
-/* Puzzle piece styles */
-.puzzle-piece {
-    width: 100px; /* Adjust this width and height as needed */
-    height: 100px;
-    border: 1px solid #ddd;
-    background-size: cover; /* Ensures the image fits within the div */
-    background-position: center;
-    margin: 5px;
-    display: inline-block;
+/* If you want the buttons to be stacked vertically in the center of the page */
+button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3;
+}
 
+/* Button Disabled Effect */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
