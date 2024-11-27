@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Grid with Icons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="ikona1.png" alt="Icon for Saikne un uzticība">
+            <h3>Saikne un uzticība</h3>
+            <p>Dzīvnieki sniedz beznosacījumu mīlestību un uzticību, un tas ir mūsu pienākums šo uzticību nesagraut.</p>
+        </div>
+        <div class="grid-item">
+            <img src="ikona2.png" alt="Icon for Atbildība">
+            <h3>Atbildība</h3>
+            <p>Mājdzīvnieks ir ģimenes loceklis, kas ir pilnībā atkarīgs no sava saimnieka.</p>
+        </div>
+        <div class="grid-item">
+            <img src="ikona3.png" alt="Icon for Veselība un drošība">
+            <h3>Veselība un drošība</h3>
+            <p>Pamesti dzīvnieki ir pakļauti bada, slimību un plēsēju uzbrukumiem, kas apdraud viņu dzīvību.</p>
+        </div>
+        <div class="grid-item">
+            <img src="ikona4.png" alt="Icon for Ietekme uz sabiedrību">
+            <h3>Ietekme uz sabiedrību</h3>
+            <p>Pamesti mājdzīvnieki bieži kļūst par klaiņojošiem dzīvniekiem, radot sabiedrības drošības riskus.</p>
+        </div>
+        <div class="grid-item">
+            <img src="ikona5.png" alt="Icon for Morālās vērtības">
+            <h3>Morālās vērtības</h3>
+            <p>Rūpes par mājdzīvnieku atspoguļo mūsu cilvēcību un empātiju pret dzīvo radību.</p>
+        </div>
+        <div class="grid-item">
+            <img src="ikona6.png" alt="Icon for Likums">
+            <h3>Likums</h3>
+            <p>Dzīvnieku atstāšana novārtā ir likuma pārkāpums.</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Apsvērt, pirms mājdzīvnieka iegādes?
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Rūpes par dzīvnieku ir ilgtermiņa. Piemēram, suņi un kaķi dzīvo 10 - 20 gadus.</li>
+                    <li>Mājdzīvniekam nepieciešama ikdienas uzmanība. Ko iesāksiet, ja dosieties ceļojumā?</li>
+                    <li>Ir nepieciešamas finanses barošanai. Turklāt arī mājdzīvnieki mēdz saslimt, un tiem nav bezmaksas veselības aprūpe.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Ko iesākt, ja tomēr nevarat vairs parūpēties?
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Atcerieties, ka dzīvnieks nav lieta, bet gan dzīva radība!</li>
+                    <li>Vēlams censties atrast jaunas, mīlošas mājas pie cilvēkiem, kurus pazīstat.</li>
+                    <li>Konsultējaties ar dzīvnieku patversmēm.</li>
+                    <li>Nākošos saimniekus vai patversmi informējiet par patieso dzīvnieka veselības stāvokli.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Kā rīkoties, ja pamanat pamestu mājdzīvnieku?
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Pārliecinieties par situāciju - dažkārt saimnieks ir tālāk nekā vajadzētu būt.</li>
+                    <li>Par prioritāti ņemot savu drošību, mēģiniet dzīvnieku piesaukt un noskaidrot, vai ir kāda norāde par īpašnieku (piemēram, piekariņš pie kaklasiksnas).</li>
+                    <li>Ja dzīvnieks labprātīgi nenāk pie Jums, necentieties to ķert un piespiest!</li>
+                    <li>Sazinieties ar tuvāko patversmi vai zvaniet policijai uz 112.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
