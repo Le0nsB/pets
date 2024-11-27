@@ -11,3 +11,9 @@ document.querySelectorAll(".accordion-header").forEach(header => {
     header.addEventListener("click", () => toggleAccordion(header));
 });
 
+
+
+
+
+
+
