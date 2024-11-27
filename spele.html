@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5x3 Puzzle Game</title>
+    <title>Puzle</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>5x3 Puzzle Game - Animal Care</h1>
+    <h1>PUZLE</h1>
 
     <div id="timer">Time: 0s</div>
 
-    <!-- Puzzle container -->
     <div id="puzzle-container"></div>
 
-    <!-- Button to restart the puzzle -->
-    <button id="restart-button">Restart</button>
+    <img src="puzzle/puzzle.jpg" id="pabeigtabilde">
 
-    <!-- Link back to the main page -->
     <button onclick="window.location.href = 'index.html';">Back to Main Page</button>
 
-    <img src="puzzle/puzzle.jpg" id="pilnabilde">
+    <div id="completion" style="display: none;">
+        <h2>Congratulations! You completed the puzzle!</h2>
+        <p>Your time: <span id="final-time"></span> seconds</p>
+        <p>Enter your name to save your score:</p>
+        <form id="save-form" action="save_score.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="hidden" id="time" name="time">
+            <button type="submit" id="save-score-button">Save Score</button>
+        </form>
+    </div>
 
     <script src="puzzle.js"></script>
 </body>

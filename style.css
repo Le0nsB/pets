@@ -4,6 +4,20 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 /* Timer Styles */
@@ -13,12 +27,54 @@ body {
     text-align: center;
     font-weight: bold;
 }
+/* Image Styles for pilnabilde */
+#pabeigtabilde {
+    display: block;
+    margin: 20px auto; /* Center horizontally with spacing above and below */
+    max-width: 28%; /* Ensure the image doesn't overflow the page */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow for depth */
+}
 
-/* Grid Styles */
+
+/* Puzzle Grid Styles */
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);  /* 5 columns for the puzzle */
+    grid-template-rows: repeat(3, 100px);     /* 3 rows for the puzzle */
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Image Styles */
+#pilnabilde {
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 28%; /* Ensure the image doesn't overflow the page */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Grid Layout for Animal Information */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns for the grid */
     gap: 20px;
     width: 80%;
     margin: 0 auto 40px;
@@ -34,8 +90,8 @@ body {
 }
 
 .grid-item img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
 }
 
@@ -89,39 +145,7 @@ body {
     font-size: 0.95em;
 }
 
-/* Puzzle Styles */
-#puzzle-container {
-    display: grid;
-    grid-template-columns: repeat(5, 100px); /* 5 columns for the puzzle */
-    grid-template-rows: repeat(3, 100px);    /* 3 rows for the puzzle */
-    gap: 5px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.puzzle-piece {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-}
-#pilnabilde {
-
-    display: block;
-    margin: 0 auto; /* Center horizontally */
-    max-width: 28%; /* Ensure the image doesn't overflow the page */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Center buttons horizontally */
+/* Button Styles */
 button {
     padding: 10px 20px;
     font-size: 1em;
@@ -131,27 +155,46 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 20px;
-    display: block; /* Ensure button behaves as a block element */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* If you want the buttons to be stacked vertically in the center of the page */
-button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* Button Hover Effect */
 button:hover {
     background-color: #0056b3;
 }
 
-/* Button Disabled Effect */
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns for smaller screens */
+    }
+    #puzzle-container {
+        grid-template-columns: repeat(3, 80px);  /* 3 columns for smaller screens */
+        grid-template-rows: repeat(2, 80px);     /* 2 rows for smaller screens */
+    }
 }

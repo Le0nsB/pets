@@ -97,3 +97,5 @@ function dropPiece(e) {
 
 // Initialize the puzzle
 createPuzzlePieces();
+
+

@@ -15,3 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function toggleDarkMode() {
+    // Toggle the 'dark-mode' class on the body
+    document.body.classList.toggle('dark-mode');
+
+    // Optionally, change the button icon when toggling
+    const button = document.getElementById('dark-mode-toggle');
+    if (document.body.classList.contains('dark-mode')) {
+        button.innerHTML = '🌞'; // Change to sun icon when in dark mode
+    } else {
+        button.innerHTML = '🌙'; // Change to moon icon when in light mode
+    }
+}
